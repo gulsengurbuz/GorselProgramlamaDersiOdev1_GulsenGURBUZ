@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="deneme3.KrediHesaplama"
+             Title="KrediHesaplama"
+             BackgroundColor="LightGray">
+   
+
+    <ContentPage.Resources>
+        <Style TargetType="Label" x:Key="ResultLabelStyle">
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="TextColor" Value="blue"  />
+            <Setter Property="FontAttributes" Value="None" />
+            <Setter Property="HorizontalOptions" Value="Start" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="Margin" Value="0,9" />
+        </Style>
+    </ContentPage.Resources>
+
+    <StackLayout Padding="20">
+        <Label Text="Kredi Tutarı" FontAttributes="Bold" TextColor="red"/>
+        <Entry x:Name="entryKrediTutari" Placeholder="Kredi tutarını girin" Keyboard="Numeric" BackgroundColor="LightSlateGray"  />
+
+        <Label Text="Faiz Oranı (%)" FontAttributes="Bold" TextColor="red" />
+        <Entry x:Name="entryFaizOrani" Placeholder="Faiz oranını girin" Keyboard="Numeric" BackgroundColor="LightSlateGray"/>
+
+        <Label Text="Vade (Ay)" FontAttributes="Bold" TextColor="red" />
+        <Entry x:Name="entryVade" Placeholder="Vade süresini girin" Keyboard="Numeric" BackgroundColor="LightSlateGray"  Margin="0,0,0,20" />
+
+        
+        <Picker x:Name="pickerKrediTuru" Title="Kredi Türü Seçin" SelectedIndexChanged="OnKrediTuruSelectedIndexChanged" TitleColor="red"   />
+
+        <Button Text="Hesapla" Clicked="OnHesaplaClicked" BackgroundColor="green" TextColor="Black" FontAttributes="Bold" />
+
+        <StackLayout x:Name="stackSonuc" IsVisible="False">
+            <Label Text="Sonuçlar" FontSize="Large" FontAttributes="Bold" Margin="0,20,0,10"  />
+
+            <Label x:Name="labelAylikTaksit" Style="{StaticResource ResultLabelStyle}" FontAttributes="Bold"/>
+            <Label x:Name="labelToplamOdeme" Style="{StaticResource ResultLabelStyle}" FontAttributes="Bold"/>
+            <Label x:Name="labelToplamFaiz" Style="{StaticResource ResultLabelStyle}" FontAttributes="Bold" />
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
+

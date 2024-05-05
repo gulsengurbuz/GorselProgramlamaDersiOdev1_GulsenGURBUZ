@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="deneme3.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:deneme3"
+    Shell.FlyoutBehavior="Flyout"
+    Title="deneme3"
+    BackgroundColor="Orange">
+    
+    
+
+
+
+
+
+<ShellContent
+        Icon="home.png"
+        Title="Ana Sayfa"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage"
+    
+      
+         />
+
+
+
+<ShellContent
+        Icon="card.png"
+    Title="Kredi Hesaplama"
+    ContentTemplate="{DataTemplate local:KrediHesaplama}"
+    Route="Kredihesaplama" />
+<ShellContent
+        Icon="vucut.png"
+      Title="Vücüt kitle İndeksi"
+      ContentTemplate="{DataTemplate local:VucütKitleİndeksi}"
+      Route="vucütKitleİndeksi" />
+<ShellContent
+        Icon="color.png"
+  Title="Renk Seçici"
+  ContentTemplate="{DataTemplate local:RenkSeçici}"
+  Route="RenkSeçici" />
+<ShellContent
+        Icon="list.png"
+  Title="Yapılacaklar listesi"
+  ContentTemplate="{DataTemplate local:YapılacaklarListesi}"
+  Route="YapılacaklarListesi" />
+
+
+</Shell>
+

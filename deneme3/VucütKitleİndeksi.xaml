@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="deneme3.VucütKitleİndeksi"
+             Title="VucütKitleİndeksi"
+             BackgroundColor="LightGray">
+    
+
+        <StackLayout Padding="20">
+            <Label Text="Kilo (kg):" FontAttributes="Bold" TextColor="red"/>
+        
+        <Entry x:Name="entryKilo" Placeholder="Kilonuzu girin" Keyboard="Numeric" BackgroundColor="LightSlateGray" 
+               TextChanged="OnEntryKiloTextChanged" />
+
+        <Slider x:Name="sliderKilo"
+                Minimum="0"
+                Maximum="150"
+               ThumbColor="MediumOrchid"
+           MinimumTrackColor="Firebrick"
+           MaximumTrackColor="HotPink"
+                ValueChanged="OnSliderValueChanged" />
+        
+           
+
+        <Label Text="Boy (metre):" FontAttributes="Bold" TextColor="red" />
+        <Entry x:Name="entryBoy" Placeholder="Boyunuzu girin" Keyboard="Numeric" BackgroundColor="LightSlateGray"
+               TextChanged="OnEntryBoyTextChanged" />
+
+        <Slider x:Name="sliderBoy"
+                Minimum="0.5"
+                Maximum="2.5"
+               ThumbColor="MediumOrchid"
+           MinimumTrackColor="Firebrick"
+           MaximumTrackColor="HotPink"
+                ValueChanged="OnSliderBoyValueChanged" />
+
+        
+        <Button Text="Hesapla" Clicked="OnHesaplaClicked" BackgroundColor="Green" TextColor="Black" FontAttributes="Bold" Margin="0,20,0,10"/>
+        <Slider x:Name="sliderBMI" Minimum="0" Maximum="50" ValueChanged="SetSliderValue" ThumbColor="MediumOrchid"
+           MinimumTrackColor="Firebrick"
+           MaximumTrackColor="HotPink"/>
+
+        <Label x:Name="labelBMI" FontSize="Medium" FontAttributes="Bold" Margin="0,20,0,10" />
+      
+        <Label x:Name="labelDurum" FontSize="Medium" FontAttributes="Bold" Margin="0,10,0,0" />
+        </StackLayout>
+
+    </ContentPage>
+
+

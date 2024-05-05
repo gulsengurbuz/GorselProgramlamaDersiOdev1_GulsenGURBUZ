@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="deneme3.RenkSeçici"
+             Title="RenkSeçici">
+
+
+    <StackLayout Padding="20">
+        <Label Text="Renk Seçici" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center" Margin="0,20,0,40" TextColor="Black"  />
+
+            
+        <Label Text="Kırmızı" HorizontalOptions="Center" Margin="0,10,0,5" TextColor="Red" FontSize="18" FontAttributes="Bold" />
+        <Slider x:Name="redSlider" Maximum="255" ValueChanged="OnSliderValueChanged" />
+           
+
+            
+        <Label Text="Yeşil" HorizontalOptions="Center" Margin="0,10,0,5" TextColor="Green" FontSize="18" FontAttributes="Bold"  />
+            <Slider x:Name="greenSlider" Maximum="255" ValueChanged="OnSliderValueChanged" />
+            
+
+        <Label Text="Mavi" HorizontalOptions="Center" Margin="0,10,0,5" TextColor="Blue" FontSize="18" FontAttributes="Bold" />
+            <Slider x:Name="blueSlider" Maximum="255" ValueChanged="OnSliderValueChanged" />
+        <Label x:Name="colorCodeLabel" Text="RGB: #000000" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,30,0,10" />
+        <Button Text="Kopyala" Clicked="OnColorCodeLabelTapped" HorizontalOptions="Center" BackgroundColor="LightGray"/>
+
+        
+
+        <Button Text="Random Color" Clicked="OnRandomColorClicked" HorizontalOptions="Center" BackgroundColor="Black" Margin="0,20,0,0" />
+        
+        </StackLayout>
+
+    </ContentPage>
